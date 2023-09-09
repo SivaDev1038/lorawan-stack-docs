@@ -13,7 +13,7 @@ This tool works in a way that it exports descriptions of end devices and applica
 
 ## Installation
 
-The migration tool can be installed using package managers or manually from binary files. We highly recommend installing or upgrading to `ttn-lw-migrate` version `0.5.0` or newer, because some features like session migration are not available for prior versions.
+The migration tool can be installed using package managers or manually from binary files. We highly recommend installing or upgrading to `ttn-lw-migrate` version `0.9.0-rc6` or newer, because some features like session migration are not available for prior versions.
 
 {{< tabs/container "macOS" "Linux" "Windows" >}}
 
