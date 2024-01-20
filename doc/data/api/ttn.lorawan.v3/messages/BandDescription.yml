@@ -97,6 +97,16 @@ fields:
   enum:
     name: DataRateIndex
   default: DATA_RATE_0
+- name: relay_forward_delay
+  message:
+    package: google.protobuf
+    name: Duration
+  default: 0s
+- name: relay_receive_delay
+  message:
+    package: google.protobuf
+    name: Duration
+  default: 0s
 - name: tx_param_setup_req_support
   type: bool
   default: false
@@ -110,4 +120,8 @@ fields:
 - name: boot_dwell_time
   message:
     name: BandDescription.DwellTime
+  default: {}
+- name: relay
+  message:
+    name: BandDescription.RelayParameters
   default: {}

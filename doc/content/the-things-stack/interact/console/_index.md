@@ -1,7 +1,7 @@
 ---
 title: "Console"
 description: ""
-aliases: [/guides/the-things-stack/interact/cli, /getting-started/console]
+aliases: [/guides/the-things-stack/interact/console, /getting-started/console]
 weight: -3
 ---
 
@@ -27,11 +27,11 @@ https://<span data-content="tenant-id"></span>.<span data-content="cluster-id"><
 
 See [Cloud Addresses]({{< ref "/the-things-stack/cloud/addresses" >}}) for more information about cluster addresses.
 
-## {{% tts %}} Community Edition
+## {{% ttss %}}
 
-If you are using {{% tts %}} Community Edition, the Console is available at `cloud.thethings.network`.
+If you are using {{% ttss %}}, the Console is available at `cloud.thethings.network`.
 
-Visit the addresses page for [{{% tts %}} Community Edition]({{< ref "reference/ttn/addresses" >}}) for more information.
+Visit the addresses page for [{{% ttss %}}]({{< ref "reference/ttn/addresses" >}}) for more information.
 
 ## {{% tts %}} Enterprise and Open Source
 

@@ -1,0 +1,14 @@
+name: DeleteOrganizationCollaboratorRequest
+fields:
+- name: organization_ids
+  message:
+    name: OrganizationIdentifiers
+  rules:
+    required: true
+  default: {}
+- name: collaborator_ids
+  message:
+    name: OrganizationOrUserIdentifiers
+  rules:
+    required: true
+  default: {}

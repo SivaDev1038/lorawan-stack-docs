@@ -31,6 +31,8 @@ description: ""
 
 {{< proto/method service="GatewayAccess" method="CreateAPIKey" >}}
 
+{{< proto/method service="GatewayAccess" method="DeleteAPIKey" >}}
+
 {{< proto/method service="GatewayAccess" method="ListAPIKeys" >}}
 
 {{< proto/method service="GatewayAccess" method="GetAPIKey" >}}
@@ -38,6 +40,8 @@ description: ""
 {{< proto/method service="GatewayAccess" method="UpdateAPIKey" >}}
 
 {{< proto/method service="GatewayAccess" method="GetCollaborator" >}}
+
+{{< proto/method service="GatewayAccess" method="DeleteCollaborator" >}}
 
 {{< proto/method service="GatewayAccess" method="SetCollaborator" >}}
 
@@ -47,7 +51,11 @@ description: ""
 
 The Gateway Server exposes the list of available frequency plans with the `Configuration` service.
 
+{{< proto/method service="Configuration" method="ListBands" >}}
+
 {{< proto/method service="Configuration" method="ListFrequencyPlans" >}}
+
+{{< proto/method service="Configuration" method="GetPhyVersions" >}}
 
 ## The `GatewayClaimingServer` service
 
@@ -85,6 +93,10 @@ The Gateway Server exposes the list of available frequency plans with the `Confi
 
 {{< proto/message message="CUPSRedirection.ClientTLS" >}}
 
+{{< proto/message message="DeleteGatewayAPIKeyRequest" >}}
+
+{{< proto/message message="DeleteGatewayCollaboratorRequest" >}}
+
 {{< proto/message message="FrequencyPlanDescription" >}}
 
 {{< proto/message message="Gateway.LRFHSS" >}}
@@ -112,6 +124,10 @@ The Gateway Server exposes the list of available frequency plans with the `Confi
 {{< proto/message message="GetGatewayIdentifiersForEUIRequest" >}}
 
 {{< proto/message message="GetInfoByGatewayEUIRequest" >}}
+
+{{< proto/message message="GetPhyVersionsRequest" >}}
+
+{{< proto/message message="ListBandsRequest" >}}
 
 {{< proto/message message="ListFrequencyPlansRequest" >}}
 
@@ -154,6 +170,8 @@ The Gateway Server exposes the list of available frequency plans with the `Confi
 {{< proto/enum enum="GatewayAntennaPlacement" >}}
 
 {{< proto/enum enum="LocationSource" >}}
+
+{{< proto/enum enum="PHYVersion" >}}
 
 {{< proto/enum enum="Right" >}}
 

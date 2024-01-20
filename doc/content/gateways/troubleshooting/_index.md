@@ -88,6 +88,10 @@ For {{% lbs %}} gateways:
 
 Check your manufacturer's documentation to access the gateway logs on your gateway, which will help to diagnose the issue.
 
+## My gateway's packet forwarder logs show "ERROR: [main] failed to start the concentrator".
+
+This error indicates that there might be a hardware issue at the gateway level. It is recommended to contact the gateway manufacturer for further support in this case.
+
 ## When the connection on the main interface goes down, my gateway gets disconnected and it does not reconnect through the backup interface.
 
 Please try restarting your gateway's packet forwarder.
@@ -131,7 +135,7 @@ If a gateway appears in the Console with the status of "Other cluster", it means
 
 Another gateway is already registered with this ID. This gateway may have been deleted already, but {{% tts %}} reserves previously used IDs for [security reasons]({{< ref "reference/id-eui-constraints" >}}).
 
-This gateway may also be registered by another user, but you are not able to see gateways registered by other users if you are not an administrator (e.g. if you are using {{% tts %}} Community Edition).
+This gateway may also be registered by another user, but you are not able to see gateways registered by other users if you are not an administrator (e.g. if you are using {{% ttss %}}).
 
 To solve this, use a different gateway ID. If you are an administrator and wish to reuse a deleted ID, see [Purging Entities]({{< ref "/the-things-stack/management/purge" >}}).
 
@@ -139,7 +143,7 @@ If you are using {{% tts %}} Cloud or Enterprise, ask the admin of your tenant t
 
 ## I get a "Gateway with EUI is Already Registered" error when adding a gateway.
 
-Another gateway is already registered with the same Gateway EUI. This gateway may be registered by another user, but if you are not an administrator (e.g if you are using {{% tts %}} Community Edition) you will not be able to see gateways registered by other users.
+Another gateway is already registered with the same Gateway EUI. This gateway may be registered by another user, but if you are not an administrator (e.g if you are using {{% ttss %}}) you will not be able to see gateways registered by other users.
 
 If the gateway is registered with the same EUI in some other tenant, the error will reflect that as well.
 
@@ -215,6 +219,10 @@ See the [{{% lbs %}} Authorization documentation](https://lora-developers.semtec
 ## I see the "API key not found" error in gateway live events. What do I do?
 
 This error is shown when the API key associated with the gateway has been deleted. Generate a [new API key]({{< ref "/gateways/concepts/adding-gateways#create-gateway-api-key" >}}), configure the gateway with it and reboot it to apply changes.
+
+## There is "Failed to retrieve TCURI from CUPS: (404) Not Found" error on my Basics Station gateway's logs.
+
+This error occurs due to the incorrect API key configuration in the [**LoRa Basics Station LNS Authentication Key** field]({{< ref "/gateways/concepts/lora-basics-station/cups#configure-cups-to-send-the-lns-api-key" >}}) available in your gateway's settings in the Console. Make sure you've followed instructions to [Configure CUPS to Send the LNS API Key]({{< ref "/gateways/concepts/lora-basics-station/cups#configure-cups-to-send-the-lns-api-key" >}}).
 
 ## {{% lbs %}} packet forwarder logs mention the "Send failed: X509 - Certificate verification failed, e.g. CRL, CA, or signature check failed" error. What does it mean?
 
@@ -305,6 +313,10 @@ Try solving this issue by:
 
 - Checking your internet connection
 - Using {{% tts %}} cluster closest to the location of your gateway
+
+## Sending a downlink fails with the "Invalid fixed paths set in application downlink" error. Why?
+
+This error might occur if the gateway mentioned in the downlink path is not connected or is unavailable for scheduling a downlink message. Make sure that the gateway is connected to {{% tts %}}.
 
 ## Why are my gateway's GPS location details not shown in {{% tts %}} Console?
 

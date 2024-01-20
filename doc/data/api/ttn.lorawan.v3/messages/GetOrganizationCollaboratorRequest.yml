@@ -7,9 +7,8 @@ fields:
     required: true
   default: {}
 - name: collaborator
-  comment: |-
-    NOTE: It is currently not possible to have organizations collaborating on
-    other organizations.
+  comment: 'NOTE: It is currently not possible to have organizations collaborating
+    on other organizations.'
   message:
     name: OrganizationOrUserIdentifiers
   rules:

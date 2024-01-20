@@ -31,6 +31,8 @@ description: ""
 
 {{< proto/method service="ApplicationAccess" method="CreateAPIKey" >}}
 
+{{< proto/method service="ApplicationAccess" method="DeleteAPIKey" >}}
+
 {{< proto/method service="ApplicationAccess" method="ListAPIKeys" >}}
 
 {{< proto/method service="ApplicationAccess" method="GetAPIKey" >}}
@@ -39,9 +41,27 @@ description: ""
 
 {{< proto/method service="ApplicationAccess" method="GetCollaborator" >}}
 
+{{< proto/method service="ApplicationAccess" method="DeleteCollaborator" >}}
+
 {{< proto/method service="ApplicationAccess" method="SetCollaborator" >}}
 
 {{< proto/method service="ApplicationAccess" method="ListCollaborators" >}}
+
+
+## The `ApplicationActivationSettingRegistry` service
+
+{{< proto/method service="ApplicationActivationSettingRegistry" method="Get" >}}
+
+{{< proto/method service="ApplicationActivationSettingRegistry" method="Set" >}}
+
+{{< proto/method service="ApplicationActivationSettingRegistry" method="Delete" >}}
+
+
+## The `ApplicationCryptoService` service
+
+{{< proto/method service="ApplicationCryptoService" method="DeriveAppSKey" >}}
+
+{{< proto/method service="ApplicationCryptoService" method="GetAppKey" >}}
 
 ## Messages
 
@@ -55,6 +75,8 @@ description: ""
 
 {{< proto/message message="Applications" >}}
 
+{{< proto/message message="ApplicationActivationSettings" >}}
+
 {{< proto/message message="Collaborator" >}}
 
 {{< proto/message message="Collaborators" >}}
@@ -65,11 +87,27 @@ description: ""
 
 {{< proto/message message="CreateApplicationRequest" >}}
 
+{{< proto/message message="DeleteApplicationAPIKeyRequest" >}}
+
+{{< proto/message message="DeleteApplicationActivationSettingsRequest" >}}
+
+{{< proto/message message="DeleteApplicationCollaboratorRequest" >}}
+
+{{< proto/message message="DeriveSessionKeysRequest" >}}
+
+{{< proto/message message="EndDeviceIdentifiers" >}}
+
+{{< proto/message message="GetRootKeysRequest" >}}
+
 {{< proto/message message="GetApplicationAPIKeyRequest" >}}
 
 {{< proto/message message="GetApplicationCollaboratorRequest" >}}
 
+{{< proto/message message="GetApplicationActivationSettingsRequest" >}}
+
 {{< proto/message message="GetApplicationRequest" >}}
+
+{{< proto/message message="KeyEnvelope" >}}
 
 {{< proto/message message="GetCollaboratorResponse" >}}
 
@@ -89,6 +127,8 @@ description: ""
 
 {{< proto/message message="SetApplicationCollaboratorRequest" >}}
 
+{{< proto/message message="SetApplicationActivationSettingsRequest" >}}
+
 {{< proto/message message="UpdateApplicationAPIKeyRequest" >}}
 
 {{< proto/message message="UpdateApplicationRequest" >}}
@@ -100,6 +140,8 @@ description: ""
 {{< proto/enum enum="ContactType" >}}
 
 {{< proto/enum enum="ContactMethod" >}}
+
+{{< proto/enum enum="MACVersion" >}}
 
 {{< proto/enum enum="Right" >}}
 

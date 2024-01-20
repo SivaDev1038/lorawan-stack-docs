@@ -7,6 +7,8 @@ description: ""
 
 {{< proto/method service="ApplicationUpStorage" method="GetStoredApplicationUp" >}}
 
+{{< proto/method service="ApplicationUpStorage" method="GetStoredApplicationUpCount" >}}
+
 ## Messages
 
 {{< proto/message message="GetStoredApplicationUpRequest" >}}
@@ -51,6 +53,8 @@ description: ""
 
 {{< proto/message message="GatewayAntennaIdentifiers" >}}
 
+{{< proto/message message="GetStoredApplicationUpCountRequest" >}}
+
 {{< proto/message message="KeyEnvelope" >}}
 
 {{< proto/message message="LoRaDataRate" >}}
@@ -60,6 +64,8 @@ description: ""
 {{< proto/message message="PacketBrokerMetadata" >}}
 
 {{< proto/message message="PacketBrokerRouteHop" >}}
+
+{{< proto/message message="RelayMetadata" >}}
 
 {{< proto/message message="RxMetadata" >}}
 
@@ -78,6 +84,8 @@ description: ""
 {{< proto/enum enum="DownlinkPathConstraint" >}}
 
 {{< proto/enum enum="LocationSource" >}}
+
+{{< proto/enum enum="RelayWORChannel" >}}
 
 {{< proto/enum enum="TxSchedulePriority" >}}
 

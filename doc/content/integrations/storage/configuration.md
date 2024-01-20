@@ -7,7 +7,7 @@ distributions: Enterprise
 
 This section contains instructions for configuring the Storage Integration on {{% tts %}} Enterprise distributions.
 
-{{< note >}} The Storage Integration is already configured on {{% tts %}} Cloud and Community Edition distributions. To enable and use the integration for specific Applications, follow the instructions in the [Enable/Disable]({{< relref "enable" >}}) and [Retrieve Messages]({{< relref "retrieve" >}}) sections. {{</ note >}}
+{{< note >}} The Storage Integration is already configured on {{% tts %}} Cloud and {{% ttss %}} distributions. To enable and use the integration for specific Applications, follow the instructions in the [Enable/Disable]({{< relref "enable" >}}) and [Retrieve Messages]({{< relref "retrieve" >}}) sections. {{</ note >}}
 
 The Storage Integration requires configuration for the underlying storage provider used, along with a few options for tuning performance and memory usage.
 
@@ -50,7 +50,7 @@ If you are using TimescaleDB, as mentioned in the [TimescaleDB Options]({{< ref 
 If you are using Docker Compose to run {{% tts %}} (as shown in [Installing {{% tts %}} guide]({{< ref "/the-things-stack/host/docker" >}})), initialize the configured database with:
 
 ```bash
-docker-compose run --rm stack storage-db init
+docker compose run --rm stack storage-db init
 ```
 
 If everything went well, upon restart, you should be able to see the following log message:

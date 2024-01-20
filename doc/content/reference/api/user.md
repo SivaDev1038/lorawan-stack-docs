@@ -23,6 +23,16 @@ description: ""
 
 {{< proto/method service="UserRegistry" method="CreateTemporaryPassword" >}}
 
+## The `ExternalUserRegistry` service
+
+{{< proto/method package="tti.lorawan.v3" service="ExternalUserRegistry" method="Create" >}}
+
+{{< proto/method package="tti.lorawan.v3" service="ExternalUserRegistry" method="GetByUserID" >}}
+
+{{< proto/method package="tti.lorawan.v3" service="ExternalUserRegistry" method="GetByExternalID" >}}
+
+{{< proto/method package="tti.lorawan.v3" service="ExternalUserRegistry" method="Delete" >}}
+
 ## The `EntityRegistrySearch` service
 
 {{< proto/method service="EntityRegistrySearch" method="SearchUsers" >}}
@@ -33,11 +43,15 @@ description: ""
 
 {{< proto/method service="UserAccess" method="CreateAPIKey" >}}
 
+{{< proto/method service="UserAccess" method="DeleteAPIKey" >}}
+
 {{< proto/method service="UserAccess" method="ListAPIKeys" >}}
 
 {{< proto/method service="UserAccess" method="GetAPIKey" >}}
 
 {{< proto/method service="UserAccess" method="UpdateAPIKey" >}}
+
+{{< proto/method service="UserAccess" method="CreateLoginToken" >}}
 
 ## The `UserInvitationRegistry` service
 
@@ -46,6 +60,12 @@ description: ""
 {{< proto/method service="UserInvitationRegistry" method="List" >}}
 
 {{< proto/method service="UserInvitationRegistry" method="Delete" >}}
+
+## The `UserSessionRegistry` service
+
+{{< proto/method service="UserSessionRegistry" method="Delete" >}}
+
+{{< proto/method service="UserSessionRegistry" method="List" >}}
 
 ## The `NotificationService` service
 
@@ -63,11 +83,15 @@ description: ""
 
 {{< proto/message message="ApplicationIdentifiers" >}}
 
+{{< proto/message package="tti.lorawan.v3" message="AuthenticationProviderIdentifiers" >}}
+
 {{< proto/message message="ClientIdentifiers" >}}
 
 {{< proto/message message="CreateUserAPIKeyRequest" >}}
 
 {{< proto/message message="ContactInfo" >}}
+
+{{< proto/message message="CreateLoginTokenRequest" >}}
 
 {{< proto/message message="CreateTemporaryPasswordRequest" >}}
 
@@ -77,7 +101,13 @@ description: ""
 
 {{< proto/message message="CreateUserRequest" >}}
 
+{{< proto/message package="tti.lorawan.v3" message="CreateExternalUserRequest" >}}
+
 {{< proto/message message="DeleteInvitationRequest" >}}
+
+{{< proto/message message="DeleteUserAPIKeyRequest" >}}
+
+{{< proto/message package="tti.lorawan.v3" message="DeleteExternalUserRequest" >}}
 
 {{< proto/message message="EndDeviceIdentifiers" >}}
 
@@ -88,6 +118,10 @@ description: ""
 {{< proto/message message="GetUserAPIKeyRequest" >}}
 
 {{< proto/message message="GetUserRequest" >}}
+
+{{< proto/message package="tti.lorawan.v3" message="GetExternalUserByUserIDRequest" >}}
+
+{{< proto/message package="tti.lorawan.v3" message="GetExternalUserByExternalIDRequest" >}}
 
 {{< proto/message message="Invitation" >}}
 
@@ -102,6 +136,8 @@ description: ""
 {{< proto/message message="ListUserAPIKeysRequest" >}}
 
 {{< proto/message message="ListUsersRequest" >}}
+
+{{< proto/message message="ListUserSessionsRequest" >}}
 
 {{< proto/message message="Notification" >}}
 
@@ -127,11 +163,15 @@ description: ""
 
 {{< proto/message message="User" >}}
 
+{{< proto/message package="tti.lorawan.v3" message="ExternalUser" >}}
+
 {{< proto/message message="UserIdentifiers" >}}
 
 {{< proto/message message="UserIdentifiers" >}}
 
 {{< proto/message message="Users" >}}
+
+{{< proto/message message="UserSessionIdentifiers" >}}
 
 ## Enums
 

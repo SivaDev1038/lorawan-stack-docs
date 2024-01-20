@@ -55,9 +55,14 @@
       }
     }
 
-    & > img {
-      max-height: 500px;
-      object-fit: contain;
+    &.logo {
+      max-width: 40%;
+      @media (max-width: 500px) {
+        max-width: 60%;
+      }
+      @media (min-width: 830px) {
+        max-width: 30%;
+      }
     }
 
     &:not(.plain) > img {
@@ -70,10 +75,13 @@
     overflow: auto;
   }
   a:link{
-    color: $blue-secondary;
+    color: $blue;
   }
   a:hover{
     text-decoration: underline;
+  }
+  a:visited{
+    color: $blue-secondary;
   }
 }
 
@@ -132,17 +140,14 @@ table.fixed td { overflow: auto; }
 
 .badge-stack {
   margin-left: .25em;
-  vertical-align: middle;
   white-space: nowrap;
+  display: flex;
+  flex-direction: row;
 }
 
 .badge-stack .badge {
   height: 1em;
   width: 1em;
-}
-
-.badge-stack .badge:not(:first-child){
-  margin-left: -0.75em;
 }
 
 .card {
@@ -417,6 +422,15 @@ table.api + table.api {
 }
 
 .table-lbs-xtime {
+  th:nth-child(1) {
+    width: 1em;
+  }
+  th:nth-child(2) {
+    width: 6em;
+  }
+}
+
+.table-devices {
   th:nth-child(1) {
     width: 1em;
   }
